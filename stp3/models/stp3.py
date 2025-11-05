@@ -43,7 +43,7 @@ class STP3(nn.Module):
         self.spatial_extent = (self.cfg.LIFT.X_BOUND[1], self.cfg.LIFT.Y_BOUND[1])
         self.bev_size = (self.bev_dimension[0].item(), self.bev_dimension[1].item())
 
-        # Encoder
+        # Encoder：定义并生成主干网络EfficienctNet，所需参数：
         self.encoder = Encoder(cfg=self.cfg.MODEL.ENCODER, D=self.depth_channels)
 
         # Temporal model
